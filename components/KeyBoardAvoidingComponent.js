@@ -4,7 +4,9 @@ import { Image, StyleSheet, Text, TextInput, View, Button, KeyboardAvoidingView 
 export default class KeyBoardAvoidingComponent extends Component {
     render() {
         return (
-            <View style={styles.container}>
+            <KeyboardAvoidingView style={styles.container}
+            behavior='padding'
+            >
                 <Image
                     source={require('../assest/react.png')}
                     style={{ width: 300, height: 300 }}
@@ -28,22 +30,21 @@ export default class KeyBoardAvoidingComponent extends Component {
                     placeholder="Confirm Password"
                     style={styles.input}
                 />
-            </View>
+            </KeyboardAvoidingView>
         )
     }
 }
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: "center",
-        padding: 20,
+        backgroundColor: '#2ecc71',
         alignItems: 'center',
-        backgroundColor: "red"
-      
+        justifyContent: 'center'
+
     },
     input: {
         height: 50,
-        backgroundColor: '#ffff',
+        backgroundColor: '#ecf0f1',
         marginHorizontal: 10,
         marginVertical: 5,
         width: 300
