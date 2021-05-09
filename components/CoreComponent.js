@@ -3,8 +3,8 @@ import { Text, View, Image, TextInput, Button,StyleSheet} from 'react-native'
 
 export default class CoreComponent extends Component {
     state = {
-        name: "",
-        student:""
+        name: '',
+        student:''
     }
 
     getCustomer(){
@@ -12,7 +12,7 @@ export default class CoreComponent extends Component {
     }
 
     getStudent(){
-        console.log(this.state.student);
+       console.log(this.state.student);
     }
 
     render() {
@@ -55,9 +55,7 @@ export default class CoreComponent extends Component {
                  <Button
                     title="Student"
                     color="red"
-                    onPress={()=>{
-                        this.getStudent();
-                    }}
+                    onPress={this.getStudent.bind(this)}
                 />
             </View>
         )
@@ -66,9 +64,10 @@ export default class CoreComponent extends Component {
 
 const style = StyleSheet.create({
     title:{
-        color:'yellow'
+        color:'red'
     },
     head:{
-        marginTop:20
+        marginTop:20,
+        backgroundColor:'#ffff'
     }
 })
