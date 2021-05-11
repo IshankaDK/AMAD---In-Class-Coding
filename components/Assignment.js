@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { View, ScrollView, StyleSheet, ScrollViewBase, FlatList, ActivityIndicator } from 'react-native'
 import { Button, Text } from 'native-base'
-import { Table, Row, Rows } from 'react-native-table-component';
+import { Table, Row } from 'react-native-table-component';
 
 export default class Assignment extends Component {
 
@@ -12,7 +12,6 @@ export default class Assignment extends Component {
             data: [],
             tableHead: ['Name', 'User Name', 'Email'],
             widthArr: [120, 120, 120]
-
         };
     }
 
@@ -32,9 +31,10 @@ export default class Assignment extends Component {
         return (
             <View style={styles.container}>
                 <Button rounded success
+                style={{marginStart: 15,marginEnd:15}}
                     onPress={this.getData.bind(this)}
                 >
-                    <Text>Get Data</Text>
+                    <Text>Get Data FROM API AND LOAD TO THE TABLE</Text>
                 </Button>
                 <Table borderStyle={{ borderWidth: 1, borderColor: '#C1C0B9' }}>
                     <Row data={this.state.tableHead} style={styles.header} widthArr={this.state.widthArr} textStyle={styles.text} />
