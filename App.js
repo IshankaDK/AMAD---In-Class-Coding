@@ -24,6 +24,7 @@ export default class App extends Component {
     return (
       <NavigationContainer>
         <Stack.Navigator>
+          <Stack.Screen name="Assignment" component={Assignment} />
           <Stack.Screen name="Fetch" component={Fetch} />
           <Stack.Screen name="AsyncView" component={AsyncView} />
           <Stack.Screen name="ScreenOne" component={ScreenOne} />
